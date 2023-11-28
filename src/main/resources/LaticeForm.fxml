@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0"
+            prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.LaticeController">
+    <top>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0"
+              prefWidth="1500.0" spacing="400.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                       minHeight="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="1st player" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="100.0" top="42.0"/>
+                    </HBox.margin>
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="currentPlayer" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0"
+                       prefWidth="350.0" text="Player curently playing" textAlignment="CENTER" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets top="25.0"/>
+                    </HBox.margin>
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                       minHeight="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="2nd player"
+                       textAlignment="CENTER" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets right="100.0" top="42.0"/>
+                    </HBox.margin>
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+            </children>
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+        </HBox>
+    </top>
+    <center>
+        <GridPane fx:id="board" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="675.0" prefWidth="675.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="75.0"/>
+                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="75.0"/>
+                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="75.0"/>
+                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="75.0"/>
+                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="75.0"/>
+                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="75.0"/>
+                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="75.0"/>
+                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="75.0"/>
+                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="75.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="NEVER"/>
+                <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="NEVER"/>
+                <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="NEVER"/>
+                <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="NEVER"/>
+                <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="NEVER"/>
+                <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="NEVER"/>
+                <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="NEVER"/>
+                <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="NEVER"/>
+                <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="NEVER"/>
+            </rowConstraints>
+            <children>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="1">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="2">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="3">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="4">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="5">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="6">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="7">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="8">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.rowIndex="1">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="1"
+                           GridPane.rowIndex="1">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="2"
+                           GridPane.rowIndex="1">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="3"
+                           GridPane.rowIndex="1">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="4"
+                           GridPane.rowIndex="1">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="5"
+                           GridPane.rowIndex="1">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="6"
+                           GridPane.rowIndex="1">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="7"
+                           GridPane.rowIndex="1">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="8"
+                           GridPane.rowIndex="1">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.rowIndex="2">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="1"
+                           GridPane.rowIndex="2">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="2"
+                           GridPane.rowIndex="2">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="3"
+                           GridPane.rowIndex="2">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="4"
+                           GridPane.rowIndex="2">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="5"
+                           GridPane.rowIndex="2">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="6"
+                           GridPane.rowIndex="2">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="7"
+                           GridPane.rowIndex="2">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="8"
+                           GridPane.rowIndex="2">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.rowIndex="3">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="1"
+                           GridPane.rowIndex="3">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="2"
+                           GridPane.rowIndex="3">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="3"
+                           GridPane.rowIndex="3">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="4"
+                           GridPane.rowIndex="3">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="5"
+                           GridPane.rowIndex="3">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="6"
+                           GridPane.rowIndex="3">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="7"
+                           GridPane.rowIndex="3">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="8"
+                           GridPane.rowIndex="3">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.rowIndex="4">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="1"
+                           GridPane.rowIndex="4">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="2"
+                           GridPane.rowIndex="4">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="3"
+                           GridPane.rowIndex="4">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="4"
+                           GridPane.rowIndex="4">
+                    <image>
+                        <Image url="/images/bg_moon.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="5"
+                           GridPane.rowIndex="4">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="6"
+                           GridPane.rowIndex="4">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="7"
+                           GridPane.rowIndex="4">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="8"
+                           GridPane.rowIndex="4">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.rowIndex="5">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="1"
+                           GridPane.rowIndex="5">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="2"
+                           GridPane.rowIndex="5">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="3"
+                           GridPane.rowIndex="5">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="4"
+                           GridPane.rowIndex="5">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="5"
+                           GridPane.rowIndex="5">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="6"
+                           GridPane.rowIndex="5">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="7"
+                           GridPane.rowIndex="5">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="8"
+                           GridPane.rowIndex="5">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.rowIndex="6">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="1"
+                           GridPane.rowIndex="6">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="2"
+                           GridPane.rowIndex="6">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="3"
+                           GridPane.rowIndex="6">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="4"
+                           GridPane.rowIndex="6">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="5"
+                           GridPane.rowIndex="6">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="6"
+                           GridPane.rowIndex="6">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="7"
+                           GridPane.rowIndex="6">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="8"
+                           GridPane.rowIndex="6">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.rowIndex="7">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="1"
+                           GridPane.rowIndex="7">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="2"
+                           GridPane.rowIndex="7">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="3"
+                           GridPane.rowIndex="7">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="4"
+                           GridPane.rowIndex="7">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="5"
+                           GridPane.rowIndex="7">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="6"
+                           GridPane.rowIndex="7">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="7"
+                           GridPane.rowIndex="7">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="8"
+                           GridPane.rowIndex="7">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.rowIndex="8">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="1"
+                           GridPane.rowIndex="8">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="2"
+                           GridPane.rowIndex="8">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="3"
+                           GridPane.rowIndex="8">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="4"
+                           GridPane.rowIndex="8">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="5"
+                           GridPane.rowIndex="8">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="6"
+                           GridPane.rowIndex="8">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="7"
+                           GridPane.rowIndex="8">
+                    <image>
+                        <Image url="/images/bg_sea.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" GridPane.columnIndex="8"
+                           GridPane.rowIndex="8">
+                    <image>
+                        <Image url="/images/bg_sun.png"/>
+                    </image>
+                </ImageView>
+            </children>
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0"
+              prefWidth="1500.0" spacing="50.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="nbTileLeftLeft" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity"
+                       maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="100.0"
+                       text="Nb of tiles left" textFill="#fff7f7">
+                    <HBox.margin>
+                        <Insets left="125.0" right="125.0" top="42.0"/>
+                    </HBox.margin>
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                        mnemonicParsing="false" onAction="#finishTurn" prefHeight="50.0" prefWidth="175.0"
+                        text="Finish turn">
+                    <HBox.margin>
+                        <Insets left="150.0" top="25.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                        mnemonicParsing="false" onAction="#changeTiles" prefHeight="50.0" prefWidth="175.0"
+                        text="Change tiles">
+                    <HBox.margin>
+                        <Insets right="150.0" top="25.0"/>
+                    </HBox.margin>
+                </Button>
+                <Label fx:id="nbTilesLeftRight" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity"
+                       maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="100.0"
+                       text="Nb of tiles left" textAlignment="CENTER" textFill="#fff8f8">
+                    <HBox.margin>
+                        <Insets left="125.0" right="75.0" top="42.0"/>
+                    </HBox.margin>
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+    </bottom>
+    <left>
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="600.0" prefWidth="150.0" spacing="150.0" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane fx:id="rackLeft" alignment="CENTER" gridLinesVisible="true" maxHeight="-Infinity"
+                          maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0"
+                          prefWidth="75.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true"/>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true"
+                                   GridPane.rowIndex="1"/>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true"
+                                   GridPane.rowIndex="2"/>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true"
+                                   GridPane.rowIndex="3"/>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true"
+                                   GridPane.rowIndex="4"/>
+                    </children>
+                </GridPane>
+                <Label fx:id="nbPtsLeft" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="100.0"
+                       text="Nb of points" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+            </children>
+            <BorderPane.margin>
+                <Insets left="150.0"/>
+            </BorderPane.margin>
+        </VBox>
+    </left>
+    <right>
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="600.0" prefWidth="150.0" spacing="150.0" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane fx:id="rackRight" alignment="CENTER" gridLinesVisible="true" maxHeight="-Infinity"
+                          maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0"
+                          prefWidth="75.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true"/>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true"
+                                   GridPane.rowIndex="1"/>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true"
+                                   GridPane.rowIndex="2"/>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true"
+                                   GridPane.rowIndex="3"/>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true"
+                                   GridPane.rowIndex="4"/>
+                    </children>
+                </GridPane>
+                <Label fx:id="nbPtsRight" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="100.0"
+                       text="Nb of points" textAlignment="CENTER" textFill="#fffdfd">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+            </children>
+            <BorderPane.margin>
+                <Insets right="150.0"/>
+            </BorderPane.margin>
+        </VBox>
+    </right>
+</BorderPane>
